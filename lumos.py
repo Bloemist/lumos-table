@@ -4,7 +4,7 @@ port = "/dev/teensy"					#Defining our serial port
 usart = serial.Serial (port,115200)
 leds = 144						#Defining led array
 leds_hex = (leds*6)
-
+brightness=0
 def push(frame='',repeat=False):			#Main function, send frame to the Teensy
 	
 	message_hex = frame
@@ -16,7 +16,7 @@ def push(frame='',repeat=False):			#Main function, send frame to the Teensy
 	if len(message_hex) % 2:   			#Hex messages shouldn't be odd-length
 		message_hex += '0'
 	n = 6						#reducing brightness for each pixel				
-	pixels = [pixel_brightness(message_hex[i:i+n],-1) for i in range(0, len(message_hex), n)]
+	pixels = [pixel_brightness(message_hex[i:i+n],brightness) for i in range(0, len(message_hex), n)]
 	message_hex = '01'				#needed to announce start of frame
 	message_hex += "".join([i for i in pixels])
 	message_bytes = message_hex.decode("hex")
