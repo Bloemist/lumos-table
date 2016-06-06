@@ -1,7 +1,5 @@
 import lumos
 
-
-
 for i in xrange(1024):
 	bina = format(i, 'b')[::-1]
 	#print(bina)
