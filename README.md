@@ -8,7 +8,11 @@ lumos.push(frame[string],repeat[bolean])	> Push frame to the matrix (top left ->
 
 lumos.clear()				> Turn all pixels off
 
-lumos.pixel_brightness(hex_color,brightness_offset) 
+lumos.brightness(frame[string],offset) 		> Change hex color brightness
+
+lumos.master_brightness(offset)				> Change general brightness
+
+lumos.console(message) > Get your message/error on the console together with the others
 
 ## Frame
 
