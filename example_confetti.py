@@ -4,8 +4,7 @@ line=''
 while i<144:
 	line += '000000'	
 	i = i+1
-n = 6
-pixels = [line[i:i+n] for i in range(0, len(line), n)]
+pixels = [line[i:i+6] for i in range(0, len(line), 6)]
 new_pixels=[]
 frame = line
 while True:
