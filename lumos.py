@@ -3,7 +3,7 @@ from collections import Counter
 
 config_leds = 1024					#Defining led array
 config_leds_hex = (config_leds*6)
-config_brightness=0
+config_brightness=-1
 config_error=[]
 config_error_time=(int(time.time())+10)
 
