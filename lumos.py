@@ -1,7 +1,7 @@
 import time
 from collections import Counter
 
-config_leds = 1024					#Defining led array
+config_leds = 144					#Defining led array
 config_leds_hex = (config_leds*6)
 config_brightness=-1
 config_error=[]
@@ -38,7 +38,7 @@ def push(frame='',repeat=False):			#Main function, send frame to the Teensy
 		message_hex += '0'
         frame=message_hex#frame=brightness(message_hex,config_brightness)
 	message_hex = '01'				#needed to announce start of frame
-	message_hex += frame
+	message_hex += frame[:config_leds_hex]
 	message_bytes = message_hex.decode("hex")
 	console("Frame pushed")
         try:
@@ -62,7 +62,7 @@ def brightness(frame,offset=-1):             #takes a color like 87c95f and prod
     if len(hex_color) != 6:
         raise Exception("Wrong format." % hex_color)
     rgb_hex = [hex_color[x:x+2] for x in [0, 2, 4]]
-    new_rgb_int = [int(hex_value, 16) + offset for hex_value in rgb_hex]
+    new_rgb_int = [(int(hex_value, 16)*(100+offset))/100 for hex_value in rgb_hex]
     new_rgb_int = [min([255, max([0, i])]) for i in new_rgb_int] #make sure new values are between 0 and 255
     new_rgb = []
     for i in new_rgb_int:
@@ -70,4 +70,4 @@ def brightness(frame,offset=-1):             #takes a color like 87c95f and prod
         if len(i)<2:
             i = '0'+i
 	new_rgb.append(i)
-    return "".join([i for i in new_rgb])
+    return "".join([i for i in new_rgb])[:config_leds_hex]

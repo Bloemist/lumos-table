@@ -11,7 +11,7 @@ while True:
 	new_pixels = []
 	lumos.push(frame,1)
 	for i in pixels:
-		new_pixels.append(lumos.brightness(i,-5))
+		new_pixels.append(lumos.brightness(i,-4))
 		
 	frame = "".join([i for i in new_pixels])
 	pixels = new_pixels

@@ -1,9 +1,9 @@
 import lumos
 
-for i in xrange(1024):
+for i in xrange(999999999):
 	bina = format(i, 'b')[::-1]
 	#print(bina)
 	bina = bina.replace('0','000000')
-	bina = bina.replace('1','FFFFFF')
+	bina = bina.replace('1','aaaaaa')
 	#print(bina)
 	lumos.push(bina)
