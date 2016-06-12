@@ -1,6 +1,6 @@
 include <OctoWS2811.h>
 
-const int ledsPerStrip = 1024;
+const int ledsPerStrip = 128;
 const int NUM_LEDS = 1024;
 
 DMAMEM int displayMemory[ledsPerStrip*6];

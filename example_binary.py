@@ -1,6 +1,6 @@
 import lumos
 
-for i in xrange(240):
+for i in xrange(1024):
 	bina = format(i, 'b')[::-1]
 	#print(bina)
 	bina = bina.replace('0','000000')

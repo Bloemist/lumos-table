@@ -24,7 +24,7 @@ while True:
         #print(l)
 	lumos.push(frame)
         for i in pixels:
-                new_pixels.append(lumos.brightness(i,-4))
+                new_pixels.append(lumos.brightness(i,96))
         frame = "".join([i for i in new_pixels])
         pixels = new_pixels
         r = lambda: random.randint(5,50)
