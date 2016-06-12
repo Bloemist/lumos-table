@@ -6,11 +6,11 @@ Include the module into your python script with "include lumos".
 ---
 #functions
 
-```lumos.push(frame,repeat)	```
+```lumos.push(frame,repeat)```
 
 > Send a hexadeximal frame to the output, for example: "FF0000FFFFFF000000FFFF0000FF00....."
-> Choose if the rest of the screen needs to be black (False) or needs to repeat the image (True)
 
+> Choose if the rest of the screen needs to be black (False) or needs to repeat the image (True)
 
 
 ```lumos.clear()```
