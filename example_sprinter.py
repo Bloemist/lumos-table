@@ -1,4 +1,5 @@
-import lumos,random,time
+import lumos
+import random
 i=0
 line=''
 while i<144:
@@ -10,6 +11,7 @@ frame = line
 l=0
 r=True
 while True:
+#for i in range(1024):
         new_pixels=[]
 	if l>130:
 		b=False
@@ -22,19 +24,13 @@ while True:
         #print(l)
 	lumos.push(frame)
         for i in pixels:
-                new_pixels.append(lumos.brightness(i,-16))
+                new_pixels.append(lumos.brightness(i,-4))
         frame = "".join([i for i in new_pixels])
         pixels = new_pixels
-        r = lambda: random.randint(5,255)
+        r = lambda: random.randint(5,50)
         color = ('%02X%02X%02X' % (r(),r(),r()))
 
 	pixels[l]=color
-
-
-
-
-
-
 
 
 

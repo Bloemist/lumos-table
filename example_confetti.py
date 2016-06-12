@@ -1,9 +1,10 @@
 import lumos,random,time
 i=0
-line=''
-while i<1024:
-	line += '000000'	
+frame=''
+while i<144:
+	frame += '000000'	
 	i = i+1
+line = frame
 pixels = [line[i:i+6] for i in range(0, len(line), 6)]
 new_pixels=[]
 frame = line
@@ -17,9 +18,5 @@ while True:
 	pixels = new_pixels
 	r = lambda: random.randint(0,255)
 	color = ('%02X%02X%02X' % (r(),r(),r()))
-	#time.sleep(0.01)
-	index = random.randint(0,140)
 	pixels[random.randint(0,140)] = color
-	pixels[index] = color
-lumos.push(color,1)
-
+	pixels[random.randint(0,140)] = color
