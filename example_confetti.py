@@ -1,7 +1,7 @@
 import lumos,random,time
 i=0
 frame=''
-while i<144:
+while i<1024:
 	frame += '000000'	
 	i = i+1
 line = frame
@@ -18,5 +18,21 @@ while True:
 	pixels = new_pixels
 	r = lambda: random.randint(0,255)
 	color = ('%02X%02X%02X' % (r(),r(),r()))
-	pixels[random.randint(0,140)] = color
-	pixels[random.randint(0,140)] = color
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+
+
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+	pixels[random.randint(0,1000)] = color
+
+
+
+
+
+
+
+
