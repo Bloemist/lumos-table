@@ -19,19 +19,19 @@ Include the module into your python script with "include lumos".
 
 
 
-lumos.brightness(frame,offset)
+```lumos.brightness(frame,offset)```
 
 > Change hex color brightness, offset in percentages (50 is half, 200 is double brightness)
 
 
 
-lumos.master_brightness(offset)				
+```lumos.master_brightness(offset)```				
 
 > Change general brightness
 
 
 
-lumos.console(message) 
+```lumos.console(message) ```
 
 > Get your message/error on the console together with the others
 
