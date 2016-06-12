@@ -1,5 +1,7 @@
 import time
 from collections import Counter
+import sys
+
 
 config_length = 1024                    #Defining led array
 config_length_hex = (config_length*6)
@@ -42,6 +44,7 @@ def push(frame='',repeat=False):            #Main function, send frame to the Te
     console("Frame pushed")
     try:
             usart.write(frame_bytes)            
+            #sys.stdout.write(frame_bytes)        
     except:
             console('Serial connection fail')
     

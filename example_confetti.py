@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import lumos,random,time
 i=0
 frame=''
